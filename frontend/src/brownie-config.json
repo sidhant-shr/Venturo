@@ -1,0 +1,35 @@
+{
+    "reports": {
+        "exclude_contracts": [
+            "SafeMath"
+        ]
+    },
+    "dependencies": [
+        "OpenZeppelin/openzeppelin-contracts@4.8.1"
+    ],
+    "compiler": {
+        "solc": {
+            "remappings": [
+                "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.8.1"
+            ]
+        }
+    },
+    "autofetch_sources": true,
+    "dotenv": ".env",
+    "networks": {
+        "default": "development",
+        "development": {
+            "verify": false
+        },
+        "goerli": {
+            "verify": true
+        },
+        "ganache": {
+            "verify": false
+        }
+    },
+    "wallets": {
+        "from_key": "${PRIVATE_KEY}",
+        "from_mnemonic": "${MNEMONIC}"
+    }
+}
